@@ -1,7 +1,5 @@
-import dotenv from "dotenv";
+import './bootstrap.ts'
 import NodeOlxFlatScrapper from "./services/nodeOlxFlatScrapper.ts";
-
-dotenv.config();
 
 const scrapper = new NodeOlxFlatScrapper();
 scrapper.prefillState();

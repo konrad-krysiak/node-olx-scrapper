@@ -1,0 +1,642 @@
+[
+  {
+    "hash": "3c854eaba2298cac89c3ae814e933450b4aebc51",
+    "title": "Wynajmę pokój studentowi niepalącemu",
+    "price": "1 100 zł.css-1vxklie{color:#7F9799;font-size:12px;line-height:16px;font-weight:100;display:block;width:100%;text-align:right;}do negocjacji",
+    "locationDate": "Kraków, Krowodrza - Odświeżono Dzisiaj o 13:23",
+    "url": "https://www.olx.pl/d/oferta/wynajme-pokoj-studentowi-niepalacemu-CID3-IDWy3Y1.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "7e807bca24a210cd3df7a425fbea51f728a127e9",
+    "title": "Pokój w domku jednorodzinnym ul.Gersona",
+    "price": "700 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Dzisiaj o 13:18",
+    "url": "https://www.olx.pl/d/oferta/pokoj-w-domku-jednorodzinnym-ul-gersona-CID3-IDTX0sI.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "30975f073c9ab48dd2fec6465cea9cdbcb99fc4a",
+    "title": "Pokój dla 1-os. Okolice Nowego Kleparza CENTRUM Super lokalizacja",
+    "price": "1 300 zł",
+    "locationDate": "Kraków, Krowodrza - Odświeżono Dzisiaj o 12:56",
+    "url": "https://www.olx.pl/d/oferta/pokoj-dla-1-os-okolice-nowego-kleparza-centrum-super-lokalizacja-CID3-IDGe0Z5.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ed2ad29b8afe8baddc365b988e8de5ab14bb63bb",
+    "title": "Słoneczny 2-os, po remoncie, Korona, UJ, AHG, UP",
+    "price": "1 090 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono Dzisiaj o 12:36",
+    "url": "https://www.olx.pl/d/oferta/sloneczny-2-os-po-remoncie-korona-uj-ahg-up-CID3-IDWAK7g.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3b7f85f25e21a3abf4b3f56adae4457df6a44bb6",
+    "title": "Miejsce dla dziewczyny od września Nowa Huta- Aleja Róż",
+    "price": "600 zł",
+    "locationDate": "Kraków, Nowa Huta - Odświeżono Dzisiaj o 12:35",
+    "url": "https://www.olx.pl/d/oferta/miejsce-dla-dziewczyny-od-wrzesnia-nowa-huta-aleja-roz-CID3-IDThOAD.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3cea01146f81b410d6a62f855dd5b22eedef09da",
+    "title": "Wynajmę pokój 1os kobiecie ul. Malborska",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono Dzisiaj o 12:33",
+    "url": "https://www.olx.pl/d/oferta/wynajme-pokoj-1os-kobiecie-ul-malborska-CID3-IDUPzbA.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "69781865532ed83d1a4eaa95322b74d684b6f715",
+    "title": "Jasny pokój jednoosobowy niedaleko Kampusu UJ     A bright single room",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Dębniki - Dzisiaj o 12:32",
+    "url": "https://www.olx.pl/d/oferta/jasny-pokoj-jednoosobowy-niedaleko-kampusu-uj-a-bright-single-room-CID3-IDHkptS.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a836e952c22d03812ac8252522753ec463a60dbc",
+    "title": "Wynajmę pokój Kraków",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Prądnik Czerwony - Dzisiaj o 12:29",
+    "url": "https://www.olx.pl/d/oferta/wynajme-pokoj-krakow-CID3-IDWRQUA.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "909f59cf81d1147af28560b616bbbd59722b6a35",
+    "title": "Pokój jednoosobowy Krowodrza, Zakątek 7",
+    "price": "1 250 zł",
+    "locationDate": "Kraków, Krowodrza - Odświeżono Dzisiaj o 12:24",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-krowodrza-zakatek-7-CID3-IDR1k81.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "c2edfaf1ee05d3c99a6bc463547fe04e335a7851",
+    "title": "Pokój jednoosobowy 4 – ul. Pachońskiego - PK, UR, UEK, AGH",
+    "price": "990 zł",
+    "locationDate": "Kraków, Prądnik Biały - Odświeżono Dzisiaj o 12:16",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-4-ul-pachonskiego-pk-ur-uek-agh-CID3-IDLfuAQ.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "6fbfdfe58f281bc06c4510e33d713d7e9e4bdab7",
+    "title": "Pokój jednoosobowy 6 - ul.Raciborska -KAMPUS UJ, CZERWONE MAKI, RUCZAJ",
+    "price": "1 020 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono Dzisiaj o 12:12",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-6-ul-raciborska-kampus-uj-czerwone-maki-ruczaj-CID3-IDLfRMr.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "d905976833cc01a7e8f2d4bf5bb4665fa27628c6",
+    "title": "Pokój do wynajęcia dla Kobiety",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Odświeżono Dzisiaj o 12:07",
+    "url": "https://www.olx.pl/d/oferta/pokoj-do-wynajecia-dla-kobiety-CID3-IDL1vJD.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "e0070ca697f65c60dfd8a39338ab0c50720575e9",
+    "title": "dla 2 osób Z BALKONEM UP, UR, AGH, UJ",
+    "price": "1 150 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono Dzisiaj o 12:04",
+    "url": "https://www.olx.pl/d/oferta/dla-2-osob-z-balkonem-up-ur-agh-uj-CID3-IDWPmZc.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "5a1ee5f857acc34627a14eb933dc7972d576ceb6",
+    "title": "Duża Jedynka - Kampus UJ - Ruczaj - wysoki standard - Przemiarki",
+    "price": "1 400 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono Dzisiaj o 12:03",
+    "url": "https://www.olx.pl/d/oferta/duza-jedynka-kampus-uj-ruczaj-wysoki-standard-przemiarki-CID3-IDWFDTV.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "7a0f176e2a8895a99c342550a360797273efccbd",
+    "title": "jednoosobowy w doskonałej lokalizacji",
+    "price": "1 600 zł",
+    "locationDate": "Kraków, Grzegórzki - Odświeżono Dzisiaj o 11:48",
+    "url": "https://www.olx.pl/d/oferta/jednoosobowy-w-doskonalej-lokalizacji-CID3-IDWK1ti.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "93347093e4f548942646c8d0810295ae3f13ddf5",
+    "title": "Pokój do wynajęcia",
+    "price": "1 300 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono Dzisiaj o 11:32",
+    "url": "https://www.olx.pl/d/oferta/pokoj-do-wynajecia-CID3-IDTlq4M.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "37ca4a90a3c492684cd75a42efeca90c52da2d81",
+    "title": "Duży pokój z balkonem dla 1 lub 2 os Kampus UJ/Ruczaj",
+    "price": "1 300 zł",
+    "locationDate": "Kraków, Podgórze - Dzisiaj o 11:26",
+    "url": "https://www.olx.pl/d/oferta/duzy-pokoj-z-balkonem-dla-1-lub-2-os-kampus-uj-ruczaj-CID3-IDWRNvx.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "10dffa433a6ae3b5bf7696c6d155c2136d4c99cc",
+    "title": "Wynajmę dwa pokoje w bardzo dobrej lokalizacji w Krakowie",
+    "price": "1 200 zł",
+    "locationDate": "Kraków, Krowodrza - Dzisiaj o 11:19",
+    "url": "https://www.olx.pl/d/oferta/wynajme-dwa-pokoje-w-bardzo-dobrej-lokalizacji-w-krakowie-CID3-IDQr50c.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "9222ff9d727a042ed4620ab806c030c78fa25a8d",
+    "title": "Pokój jednoosobowy - Bronowice - ul.Rydla 37",
+    "price": "1 250 zł",
+    "locationDate": "Kraków, Krowodrza - Odświeżono Dzisiaj o 10:44",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-bronowice-ul-rydla-37-CID3-IDUJrTG.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "1992da2943ae5b1151d08d7f9dfd1662fce9103c",
+    "title": "[Pokój do wynajęcia] 1 osobowy ul. Sadowej okolice ul. Opolskiej",
+    "price": "1 420 zł",
+    "locationDate": "Kraków, Prądnik Czerwony - Dzisiaj o 10:36",
+    "url": "https://www.olx.pl/d/oferta/pokoj-do-wynajecia-1-osobowy-ul-sadowej-okolice-ul-opolskiej-CID3-IDWRKn9.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "460f83432d9c436bc12f07a7d94606de3e218308",
+    "title": "Pokoje dwuosobowe ul. Królewska, Biprostal, UP, AGH, UR, UJ, od 1.09!",
+    "price": "690 zł",
+    "locationDate": "Kraków, Krowodrza - Dzisiaj o 10:34",
+    "url": "https://www.olx.pl/d/oferta/pokoje-dwuosobowe-ul-krolewska-biprostal-up-agh-ur-uj-od-1-09-CID3-IDWqmMT.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "11932a38ed26fb03a1202e6c051a98ef89f4b0fa",
+    "title": "Pokój dla 2 osób na Bronowicach - okolice przystanku Wesele",
+    "price": "1 600 zł",
+    "locationDate": "Kraków, Bronowice - Dzisiaj o 10:27",
+    "url": "https://www.olx.pl/d/oferta/pokoj-dla-2-osob-na-bronowicach-okolice-przystanku-wesele-CID3-IDWRK7p.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "45e0e7c56858cda07eea2f273037a4f7556ecd57",
+    "title": "[Pokój wynajmę] pokój 1-osobowy w 4 pokojowym - aleja Pokoju.",
+    "price": "1 470 zł",
+    "locationDate": "Kraków, Grzegórzki - Dzisiaj o 10:10",
+    "url": "https://www.olx.pl/d/oferta/pokoj-wynajme-pokoj-1-osobowy-w-4-pokojowym-aleja-pokoju-CID3-IDWRJd0.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "b49408f85ed2e902a378f2159445d064a2cd629f",
+    "title": "Pokój  jednoosobowy",
+    "price": "1 300 zł",
+    "locationDate": "Kraków, Prądnik Biały - Dzisiaj o 09:51",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-CID3-IDPUiqf.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a04e7ac86eb5bab063dc3901c3af4eac2e9452d3",
+    "title": "Pokój jednoosobowy w apartamencie ul. Pachońskiego wysoki standard",
+    "price": "900 zł",
+    "locationDate": "Kraków, Prądnik Biały - Dzisiaj o 09:31",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-w-apartamencie-ul-pachonskiego-wysoki-standard-CID3-IDWREqn.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "38ad5fb7ad5f0c0999bc0a8499bf6da199843e0a",
+    "title": "Pokoj do wynajęcia Kraków środmieście-stare miasto- ul. Kątowa",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Stare Miasto - Dzisiaj o 09:21",
+    "url": "https://www.olx.pl/d/oferta/pokoj-do-wynajecia-krakow-srodmiescie-stare-miasto-ul-katowa-CID3-IDWRGDq.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "fc99ea3cad7d439795e5aadc7cb0643c62d67a56",
+    "title": "MIESZKANIE studenckie pokój  nowe Kraków centrum",
+    "price": "850 zł",
+    "locationDate": "Kraków, Grzegórzki - Odświeżono Dzisiaj o 09:20",
+    "url": "https://www.olx.pl/d/oferta/mieszkanie-studenckie-pokoj-nowe-krakow-centrum-CID3-IDL0wSW.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3a5a3927e2331c401558900eeade6ac8f750ab83",
+    "title": "Wynajme pokój Gutenberga Kraków Ruczaj koło kampusu UJ",
+    "price": "800 zł",
+    "locationDate": "Kraków, Podgórze - Dzisiaj o 09:17",
+    "url": "https://www.olx.pl/d/oferta/wynajme-pokoj-gutenberga-krakow-ruczaj-kolo-kampusu-uj-CID3-IDWRGrC.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ad175cf7abfb9f902cf6b029d0d98996e5314bc4",
+    "title": "Pokój 1- osobowy, ul.Przewóz, Mały Płaszów",
+    "price": "900 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono Dzisiaj o 09:08",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-osobowy-ul-przewoz-maly-plaszow-CID3-IDWH4e9.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "4c148b54ab36ec513e340e6baeff3cbe14495d3e",
+    "title": "Nowy pokój 1 os. Grota Roweckiego 23 - przy Kampusie UJ!",
+    "price": "1 140 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono Dzisiaj o 08:52",
+    "url": "https://www.olx.pl/d/oferta/nowy-pokoj-1-os-grota-roweckiego-23-przy-kampusie-uj-CID3-IDH2agP.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "de751e7cb1cefe9ee8342094b28b17e496bf7b1e",
+    "title": "Pokoje dla pracownikow",
+    "price": "1 600 zł",
+    "locationDate": "Kraków, Zwierzyniec - Odświeżono Dzisiaj o 08:48",
+    "url": "https://www.olx.pl/d/oferta/pokoje-dla-pracownikow-CID3-IDWxJIu.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "b26de00321cd824089d8bd632219130c8c3ac7e8",
+    "title": "Pokój 1 osobowy ul. Bobrzyńskiego 41 -> Ruczaj - tylko 3 pokoje!",
+    "price": "1 390 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono Dzisiaj o 08:48",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-osobowy-ul-bobrzynskiego-41-ruczaj-tylko-3-pokoje-CID3-IDJCpg9.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "aa00c53f8c7eeac78c988d5fbd51c0b2ac5bf71e",
+    "title": "Komfortowy pokój | Plac Centralny | tramwaj | AWF",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Nowa Huta - Dzisiaj o 02:54",
+    "url": "https://www.olx.pl/d/oferta/komfortowy-pokoj-plac-centralny-tramwaj-awf-CID3-IDWRzBr.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "be896271cb31ae0c4dfd2c26022f041aadc2e60a",
+    "title": "Piękny pokój  BIEŻANÓW | Duża Góra |",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Dzisiaj o 02:48",
+    "url": "https://www.olx.pl/d/oferta/piekny-pokoj-biezanow-duza-gora-CID3-IDWRzAV.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "b5631a96b5a87a09105a586312150139e2cd6f08",
+    "title": "KOMFORTOWY pokój / całe mieszkanie w fajnym miejscu | Płaszów |",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Podgórze - Dzisiaj o 02:41",
+    "url": "https://www.olx.pl/d/oferta/komfortowy-pokoj-cale-mieszkanie-w-fajnym-miejscu-plaszow-CID3-IDWRzAv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "cd0af1b74752f795a445ed7bf949d9b8a3c2466e",
+    "title": "Pokój z balkonem | BAGRY | Siemienowicza | + 3 inne pokoje",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Podgórze - Dzisiaj o 02:40",
+    "url": "https://www.olx.pl/d/oferta/pokoj-z-balkonem-bagry-siemienowicza-3-inne-pokoje-CID3-IDWRzAr.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "9a2226025d0ad54596dce46155580b179af730b3",
+    "title": "Jasny i komfortowy pokój | UJ Medyczny | PROKOCIM",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Dzisiaj o 02:31",
+    "url": "https://www.olx.pl/d/oferta/jasny-i-komfortowy-pokoj-uj-medyczny-prokocim-CID3-IDWRzA1.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "6187686e658b94f2ba20ff56af1caa7081ac0787",
+    "title": "Przytulne,Parking,Ogród,UL.Kossocicka,Farmacja,Medycyna,UJ Szpital",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Odświeżono Dzisiaj o 00:24",
+    "url": "https://www.olx.pl/d/oferta/przytulne-parking-ogrod-ul-kossocicka-farmacja-medycyna-uj-szpital-CID3-IDWIMY3.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ce7f4a95e94cf666bcd68fd921c250ebd1bbf075",
+    "title": "POKÓJ / POKOJE na Woli Duchackiej przy BONARCE",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Podgórze Duchackie - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-pokoje-na-woli-duchackiej-przy-bonarce-CID3-IDWRz8M.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "10d83b60a8469168a9e9f74ff77d02effcf8d872",
+    "title": "Pokój z balkonem | BONARKA",
+    "price": "950 zł",
+    "locationDate": "Kraków, Podgórze Duchackie - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-z-balkonem-bonarka-CID3-IDWRz7L.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ba0b5565b62b26273111c86e28c96d7ee3b1fd62",
+    "title": "Pokój na wynajem Kraków - Podgórze Duchackie",
+    "price": "1 390 zł",
+    "locationDate": "Kraków, Podgórze Duchackie - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-na-wynajem-krakow-podgorze-duchackie-CID3-IDWQ67r.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "663b02eb2c3e69ef272c708cbe2a34bee79457f9",
+    "title": "Garsoniera Kraków Bronowice ul. Filtrowa 1700+ 500",
+    "price": "1 700 zł",
+    "locationDate": "Kraków, Bronowice - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/garsoniera-krakow-bronowice-ul-filtrowa-1700-500-CID3-IDWDj7D.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "c25e39fd1d10560a0f351347158a46a9cdf46b53",
+    "title": "Kraków ul Nawojki miejsce dla studenta w pokoju dwuosobowym 500+300",
+    "price": "500 zł",
+    "locationDate": "Kraków, Bronowice - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/krakow-ul-nawojki-miejsce-dla-studenta-w-pokoju-dwuosobowym-500-300-CID3-IDWMMKp.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3818e5b273a4fcea5aa231a7e9b8587b7b00f6a3",
+    "title": "Pokój tylko dla spokojnej dziewczyny Narciarska / czyżyny/",
+    "price": "800 zł",
+    "locationDate": "Kraków, Czyżyny - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-tylko-dla-spokojnej-dziewczyny-narciarska-czyzyny-CID3-IDWRy1i.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "c9a08211c79fa06e0e0db499a0675e9a42493b45",
+    "title": "Wynajmę pokój w apartamentowcu",
+    "price": "1 300 zł",
+    "locationDate": "Kraków, Dębniki - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/wynajme-pokoj-w-apartamentowcu-CID3-IDFbJ6d.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "29c762509a5af1931856458bab390b2f9db3932b",
+    "title": "Pokój 1-2 os., 16m2, balkon, nowe budownictwo, 2.5km do Rynku!",
+    "price": "1 400 zł",
+    "locationDate": "Kraków, Prądnik Biały - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-2-os-16m2-balkon-nowe-budownictwo-2-5km-do-rynku-CID3-IDWRvV7.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "422a3d7cd72117888f624b0554f678dcf1fd625e",
+    "title": "Pokój jednoosobowy  ul.Sereno Fenn'a /Stary Kleparz",
+    "price": "1 400 zł",
+    "locationDate": "Kraków, Stare Miasto - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-ul-sereno-fenna-stary-kleparz-CID3-IDWOU5F.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "80247e04e06fb2c6966df0753fee669687d8804b",
+    "title": "Ładna jedynka na Krowodrzy Górce, od października.",
+    "price": "1 110 zł",
+    "locationDate": "Kraków, Prądnik Biały - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/ladna-jedynka-na-krowodrzy-gorce-od-pazdziernika-CID3-IDFeTzv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a3b3b0de644e661f2a3e983fd7a64edbba663bc6",
+    "title": "Duży pokój dla dwóch osób, centrum",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/duzy-pokoj-dla-dwoch-osob-centrum-CID3-IDWRu15.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "5b280f83025f453f7ee536fff8254b24c4ed0619",
+    "title": "Urocza jedynka do wynajęcia od zaraz. Podgórze Duchackie",
+    "price": "1 260 zł",
+    "locationDate": "Kraków, Podgórze Duchackie - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/urocza-jedynka-do-wynajecia-od-zaraz-podgorze-duchackie-CID3-IDWCYVM.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "7ca4b2df5fc654bc36322e5970bb203af42af924",
+    "title": "Pokój do wynajęcia w centrum, Wrocławska",
+    "price": "1 000 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-do-wynajecia-w-centrum-wroclawska-CID3-IDWRtQ4.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a7b1777825eaed53c4464c8d658566216574c7ac",
+    "title": "Urocza jedynka po remoncie,ul. Szopkarzy. Krowodrza Górka, od 1.10",
+    "price": "1 210 zł",
+    "locationDate": "Kraków, Prądnik Biały - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/urocza-jedynka-po-remoncie-ul-szopkarzy-krowodrza-gorka-od-1-10-CID3-IDLyiAq.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "191313c40933367913884eafd02a9a2afce509ce",
+    "title": "Pokój 1 - osobowy ul. Radzikowskiego Kraków",
+    "price": "900 zł.css-1vxklie{color:#7F9799;font-size:12px;line-height:16px;font-weight:100;display:block;width:100%;text-align:right;}do negocjacji",
+    "locationDate": "Kraków, Bronowice - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-osobowy-ul-radzikowskiego-krakow-CID3-IDUT99g.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "b668c525a890a5d0e97452c81df0bafa99b54c6c",
+    "title": "Tanie pokoje / kwatery pracownicze / niskie ceny/ juz od 450zl/os !!!",
+    "price": "700 zł",
+    "locationDate": "Kraków, Łagiewniki-Borek Fałęcki - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/tanie-pokoje-kwatery-pracownicze-niskie-ceny-juz-od-450zl-os-CID3-IDGeeCP.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "0cc7a477b806f80017c8428994847248ecafe9e2",
+    "title": "Duży pokój 1-os + balkon 7m2, Ruczaj, Kampus UJ, Rostworowskiego",
+    "price": "1 350 zł",
+    "locationDate": "Kraków, Dębniki - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/duzy-pokoj-1-os-balkon-7m2-ruczaj-kampus-uj-rostworowskiego-CID3-IDWRtDv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "7cf3d2a78f81f4c120e69419836798071bc77df8",
+    "title": "Przytulny pokój w centrum, ul. Wrocławska",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/przytulny-pokoj-w-centrum-ul-wroclawska-CID3-IDWRtI6.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "478cdd2a7cf3cbb9715a6b250ac1107e4a5e9c8e",
+    "title": "Duży pokój w centrum, Wrocławska",
+    "price": "1 150 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/duzy-pokoj-w-centrum-wroclawska-CID3-IDWRtyJ.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "6af67220322ac418c9659279bbfab5c570a28df2",
+    "title": "Pokój 1 os 12m2, Ruczaj, Osiedle Europejskie DLA CHŁOPAKA!",
+    "price": "1 250 zł",
+    "locationDate": "Kraków, Dębniki - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-os-12m2-ruczaj-osiedle-europejskie-dla-chlopaka-CID3-IDWRtlI.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a20411355da3c0df140c18acd9d2e5e9836cdcef",
+    "title": "1 miejsce w pokoju 3-osobowym dla chłopaka tuż obok UP i PK",
+    "price": "450 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/1-miejsce-w-pokoju-3-osobowym-dla-chlopaka-tuz-obok-up-i-pk-CID3-IDWRtqa.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "a154b12ccfd3e11f9c7c93085428d9fbb1bae5c7",
+    "title": "WYGODNY POKÓJ - idealny dla studenta - PROMIENISTYCH",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Prądnik Biały - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/wygodny-pokoj-idealny-dla-studenta-promienistych-CID3-IDWRtme.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "c655b3db27c578f6e5462205b00bbc0c3cf73ab9",
+    "title": "Pokój jednoosobowy, Uniwersytet Medyczny, Prokocim",
+    "price": "1 350 zł",
+    "locationDate": "Kraków, Bieżanów-Prokocim - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-uniwersytet-medyczny-prokocim-CID3-IDWPQtv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "486731036321bf0a75c778d6a7c98527033feb33",
+    "title": "Pokój dla dwóch osób",
+    "price": "1 300 złdo negocjacji",
+    "locationDate": "Kraków, Dębniki - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-dla-dwoch-osob-CID3-IDWRthh.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "f629f45cd958e9d12c24aa36a0bc3d675bcf04c8",
+    "title": "KOMFORTOWY POKÓJ w SUPER lokalizacji - Żabiniec -Kaufland",
+    "price": "1 100 zł",
+    "locationDate": "Kraków, Prądnik Biały - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/komfortowy-pokoj-w-super-lokalizacji-zabiniec-kaufland-CID3-IDWRsV1.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "9aee1da3fad8372f2bd0d69e72682528b649ca56",
+    "title": "PIĘKNY DUŻY POKÓJ 20M2 - Prądnik Biały, ul. Bociana",
+    "price": "1 600 zł",
+    "locationDate": "Kraków, Prądnik Biały - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/piekny-duzy-pokoj-20m2-pradnik-bialy-ul-bociana-CID3-IDWRsDS.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "1b596b130e03799652700a788502e0df20e52493",
+    "title": "Pokój z osobną łazienką i balkonem w try pokojowym mieszkaniu",
+    "price": "900 złdo negocjacji",
+    "locationDate": "Kraków, Czyżyny - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-z-osobna-lazienka-i-balkonem-w-try-pokojowym-mieszkaniu-CID3-IDWRsCg.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "8e518a5d63b9e23477802402320144193e0704a0",
+    "title": "Pokój jednoosobowy",
+    "price": "1 050 zł",
+    "locationDate": "Kraków, Podgórze Duchackie - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-CID3-IDQE4iL.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "978c424c0912cda6fb413e64adc8ede91984c084",
+    "title": "Pokój 2os z balkonem ul. G. Zapolskiej 42, UP,AGH,UJ, AKTUALNE",
+    "price": "650 zł",
+    "locationDate": "Kraków, Bronowice - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-2os-z-balkonem-ul-g-zapolskiej-42-up-agh-uj-aktualne-CID3-IDQ5tJf.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "dae5b4c0e23b2170c2d71e9ad8b88fc72fd150b0",
+    "title": "Pokój 1 os. al. Kijowska, Wrocławska, Kraków Łobzów, Mazowiecka",
+    "price": "1 380 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-os-al-kijowska-wroclawska-krakow-lobzow-mazowiecka-CID3-IDNaamD.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "939a8ba8e82ef9add89c3ab4add793f476acd4f2",
+    "title": "Pokój 1 os. al. Kijowska, Wrocławska, Kraków Łobzów, Mazowiecka",
+    "price": "980 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-os-al-kijowska-wroclawska-krakow-lobzow-mazowiecka-CID3-IDQ5zZ2.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3886dfa81407648b903d7868ab7283abb787a207",
+    "title": "Pokój ul. Jabłonna 20 z aneksem i łazienką. Al. 29 Listopada, od 1.08!",
+    "price": "1 420 zł",
+    "locationDate": "Kraków, Bronowice - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-ul-jablonna-20-z-aneksem-i-lazienka-al-29-listopada-od-1-08-CID3-IDQ69Om.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "0481d91d7d1edc8cf3e2f580f966d6ae1b663268",
+    "title": "Duży pokój - super lokalizacja!  AGH ,UP, UR,  PK, Biprostal.",
+    "price": "1 250 zł",
+    "locationDate": "Kraków, Krowodrza - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/duzy-pokoj-super-lokalizacja-agh-up-ur-pk-biprostal-CID3-IDWLfBG.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ee2935c14a7db72a0c524cab791fa49ffebe80ac",
+    "title": "Pokój 1-os. Centrum E, Plac Centralny - AWF, PK - tylko 4 lokatorów",
+    "price": "1 190 zł",
+    "locationDate": "Kraków, Bieńczyce - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-os-centrum-e-plac-centralny-awf-pk-tylko-4-lokatorow-CID3-IDHy3Lr.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "b21f4fad58daa6c989b37f079dcf891a199628c5",
+    "title": "Centrum Krakowa, 19 m2 pokój do wynajęcia",
+    "price": "1 200 zł",
+    "locationDate": "Kraków, Stare Miasto - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/centrum-krakowa-19-m2-pokoj-do-wynajecia-CID3-IDWKk7v.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "ec7967dc3764b94daa307d4b9de4c6297ab9ed98",
+    "title": "3 POKOJE Pok. 1 os. do wynajęcia ul.  Na Błonie/ Bronowice/ TRAMWAJ",
+    "price": "1 230 zł",
+    "locationDate": "Kraków, Bronowice - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/3-pokoje-pok-1-os-do-wynajecia-ul-na-blonie-bronowice-tramwaj-CID3-IDQBfdv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "18047ec68eb54c3021f9d93b7b227e88606953c3",
+    "title": "Pokój 1 os, Ruczaj, Campus UJ, od zaraz",
+    "price": "1 200 zł",
+    "locationDate": "Kraków, Łagiewniki-Borek Fałęcki - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-1-os-ruczaj-campus-uj-od-zaraz-CID3-IDWNtQY.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "460f6ce0e95f607f8c794a501ded88ee30973b63",
+    "title": "Pokój jednoosobowy - Krowodrza - Wichury 12 - 1250zł",
+    "price": "1 250 zł",
+    "locationDate": "Kraków, Krowodrza - 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-krowodrza-wichury-12-1250zl-CID3-IDWRq2R.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "bd9ee7ea920df9690848fdf3191a57010063999c",
+    "title": "PRZESTRONNY Pok 1-os. AWF, PK, od 01.09.2023",
+    "price": "1 350 zł",
+    "locationDate": "Kraków, Czyżyny - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/przestronny-pok-1-os-awf-pk-od-01-09-2023-CID3-IDWNt4v.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "25e935c7190808c2530e33ca33451a557e251943",
+    "title": "Klimatyczny przestronny nowiutki  pokoj kolo Bonarki",
+    "price": "900 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/klimatyczny-przestronny-nowiutki-pokoj-kolo-bonarki-CID3-IDQZ2Xv.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "3240a552dce83cd543b591330579b0f884d9ad0d",
+    "title": "Uniwersytet Rolniczy, AGH, U. Ekonomiczny.",
+    "price": "970 zł",
+    "locationDate": "Kraków, Prądnik Biały - Odświeżono dnia 12 sierpnia 2023",
+    "url": "https://www.olx.pl/d/oferta/uniwersytet-rolniczy-agh-u-ekonomiczny-CID3-IDWIkhr.html",
+    "created": "8/13/2023, 3:38:38 PM"
+  },
+  {
+    "hash": "953a5d534b9e7bd135df36ea485915ebc37d439b",
+    "title": "Pokój jednoosobowy - 2 | ul. Kobierzyńska  | KAMPUS UJ, RUCZAJ",
+    "price": "1 120 zł",
+    "locationDate": "Kraków, Podgórze - Odświeżono Dzisiaj o 12:16",
+    "url": "https://www.olx.pl/d/oferta/pokoj-jednoosobowy-2-ul-kobierzynska-kampus-uj-ruczaj-CID3-IDT819r.html",
+    "created": "8/13/2023, 3:40:38 PM"
+  }
+]

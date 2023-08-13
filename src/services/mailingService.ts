@@ -1,4 +1,6 @@
+import '../bootstrap.ts'
 import nodemailer from "nodemailer";
+
 
 class MailingService {
   #transporter = nodemailer.createTransport({

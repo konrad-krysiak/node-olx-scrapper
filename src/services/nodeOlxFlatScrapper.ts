@@ -1,3 +1,4 @@
+import '../bootstrap.ts';
 import Xray from "x-ray";
 import hash from "object-hash";
 import responseDto from "src/types/responseDto.ts";
@@ -5,11 +6,12 @@ import executeOptions from "../types/executeOptions.ts";
 import filterFeatured from "../utils/filterFeatured.ts";
 import messageFormat from "../utils/messageFormat.ts";
 import mailingService from "./mailingService.ts";
-
+import DatabseService, { dbEntity } from './dbService.ts';
 class NodeOlxFlatScrapper {
   private _emailTarget = process.env.TARGET_EMAIL || '';
-  _state = new Map<string, responseDto>();
-  _xrayInstance = Xray();
+  private _state = new Map<string, responseDto>();
+  private _xrayInstance = Xray();
+  private _db = new DatabseService();
 
   execute(cb: (res: responseDto[]) => void, options?: executeOptions) {
     this._xrayInstance(
@@ -41,10 +43,18 @@ class NodeOlxFlatScrapper {
 
   prefillState() {
     this.execute(
-      (res) => {
-        console.log("prefill cb executed");
-        res.forEach((obj) => this._state.set(hash(obj), obj));
-        console.log("Prefill state - ", this._state);
+      async (res) => {
+        console.log("Prefill callback has been executed.");
+        const currentState = await this._db.read();
+        const dataToAdd: dbEntity[] = [];
+        res.forEach(async (obj) => {
+          const objHash = hash(obj);
+          const alreadyExists = currentState.find(entity => entity.hash === objHash);
+          if(!alreadyExists) {
+            dataToAdd.push({ hash: objHash, ...obj, created: new Date().toLocaleString() });
+          }
+        })
+        await this._db.batchWrite(dataToAdd);
       },
       { pageLimit: 2, filterCb: filterFeatured }
     );
@@ -52,19 +62,32 @@ class NodeOlxFlatScrapper {
 
   executeAndCheck() {
     this.execute(
-      (res) => {
+      async (res) => {
         console.log("executeAndCheck cb executed");
-        const updatedState = new Map(res.map((obj) => [hash(obj), obj]));
+        const updatedState: dbEntity[] = res.map(obj => {
+          return {
+            hash: hash(obj),
+            ...obj,
+            created: new Date().toLocaleString()
+          }
+        })
 
-        const addedItems: responseDto[] = [];
-        updatedState.forEach((value, key) => {
-          if (this._state.get(key) === undefined) {
-            this._state.set(hash(value), value);
+        const state = await this._db.read();
+        if(state.length === 0) {
+          console.log('Prefill first! Otherwise lots of email messages will be sent.');
+          return;
+        }
+        const addedItems: dbEntity[] = [];
+        updatedState.forEach((value) => {
+          const existsInDb = state.find(obj => obj.hash === value.hash);
+          if(!existsInDb) {
             addedItems.push(value);
           }
         });
 
-        console.log("added items -", addedItems);
+        await this._db.batchWrite(addedItems);
+
+        console.log("Following items has been added -", addedItems);
         addedItems.forEach((obj) => {
           mailingService
             .sendEmail(

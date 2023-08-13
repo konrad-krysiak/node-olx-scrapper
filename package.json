@@ -19,7 +19,9 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@types/lowdb": "^1.0.11",
     "dotenv": "^16.3.1",
+    "lowdb": "^6.0.1",
     "nodemailer": "^6.9.4",
     "object-hash": "^3.0.0",
     "x-ray": "^2.3.4"
