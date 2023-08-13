@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 
 class MailingService {
-  #transporter = nodemailer.createTransport({
+  private _transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.SOURCE_EMAIL,
@@ -13,7 +13,7 @@ class MailingService {
 
   async sendEmail(recipient: string, subject: string, html:string) {
     try {
-      const response = await this.#transporter.sendMail({
+      const response = await this._transporter.sendMail({
         from: process.env.SOURCE_EMAIL,
         to: recipient,
         subject,
@@ -21,7 +21,7 @@ class MailingService {
       });
       return response.messageId;
     } catch (e) {
-      console.log("Error while sending email!", e);
+      console.log("Error while sending email.", e);
       return false;
     }
   }

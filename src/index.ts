@@ -2,7 +2,7 @@ import './bootstrap.ts'
 import NodeOlxFlatScrapper from "./services/nodeOlxFlatScrapper.ts";
 
 const scrapper = new NodeOlxFlatScrapper();
-scrapper.prefillState();
+// scrapper.prefillState(5);
 
 setInterval(() => {
   scrapper.executeAndCheck();

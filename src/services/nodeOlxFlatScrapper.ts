@@ -1,15 +1,14 @@
 import '../bootstrap.ts';
 import Xray from "x-ray";
-import hash from "object-hash";
 import responseDto from "src/types/responseDto.ts";
 import executeOptions from "../types/executeOptions.ts";
 import filterFeatured from "../utils/filterFeatured.ts";
 import messageFormat from "../utils/messageFormat.ts";
 import mailingService from "./mailingService.ts";
 import DatabseService, { dbEntity } from './dbService.ts';
+import hashObject from '../utils/hashObject.ts';
 class NodeOlxFlatScrapper {
   private _emailTarget = process.env.TARGET_EMAIL || '';
-  private _state = new Map<string, responseDto>();
   private _xrayInstance = Xray();
   private _db = new DatabseService();
 
@@ -41,14 +40,14 @@ class NodeOlxFlatScrapper {
       });
   }
 
-  prefillState() {
+  prefillState(pageLimit: number) {
     this.execute(
       async (res) => {
         console.log("Prefill callback has been executed.");
         const currentState = await this._db.read();
         const dataToAdd: dbEntity[] = [];
         res.forEach(async (obj) => {
-          const objHash = hash(obj);
+          const objHash = hashObject(obj);
           const alreadyExists = currentState.find(entity => entity.hash === objHash);
           if(!alreadyExists) {
             dataToAdd.push({ hash: objHash, ...obj, created: new Date().toLocaleString() });
@@ -56,17 +55,17 @@ class NodeOlxFlatScrapper {
         })
         await this._db.batchWrite(dataToAdd);
       },
-      { pageLimit: 2, filterCb: filterFeatured }
+      { pageLimit, filterCb: filterFeatured }
     );
   }
 
   executeAndCheck() {
     this.execute(
       async (res) => {
-        console.log("executeAndCheck cb executed");
+        console.log("Execute and check callback has been executed.");
         const updatedState: dbEntity[] = res.map(obj => {
           return {
-            hash: hash(obj),
+            hash: hashObject(obj),
             ...obj,
             created: new Date().toLocaleString()
           }
