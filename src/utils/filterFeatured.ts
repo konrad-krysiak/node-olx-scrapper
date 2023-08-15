@@ -1,4 +1,4 @@
-import responseDto from "src/types/responseDto.ts";
+import olxResponseDto from "../types/olxResponseDto.ts";
 
-export default (res: responseDto[]) =>
+export default (res: olxResponseDto[]) =>
   res.filter((obj) => obj.featured === undefined);

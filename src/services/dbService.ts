@@ -1,19 +1,18 @@
 // Remember to set type: module in package.json or use .mjs extension
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import responseDto from '../types/responseDto.ts'
+import { dbEntity } from '../types/dbEntity.ts'
 
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
 
-export type dbEntity = responseDto & { hash: string, created: string };
 
 class DatabaseService {
     private __dirname = dirname(fileURLToPath(import.meta.url));
-    private __file = join(this.__dirname, '../db/db.json');
-    private adapter = new JSONFile<dbEntity[]>(this.__file);
-    private defaultData: dbEntity[] = [];
-    private _dbInstance = new Low<dbEntity[]>(this.adapter, this.defaultData)
+    private _file = join(this.__dirname, '../db/db.json');
+    private _adapter = new JSONFile<dbEntity[]>(this._file);
+    private _defaultData: dbEntity[] = [];
+    private _dbInstance = new Low<dbEntity[]>(this._adapter, this._defaultData)
 
     async read() {
         await this._dbInstance.read();

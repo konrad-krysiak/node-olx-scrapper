@@ -1,7 +1,7 @@
-import responseDto from "./responseDto.ts";
+import responseDto from "../models/responseDto";
 
-export default interface executeOptions {
+export default interface executeOptions<T extends responseDto> {
     pageLimit: number;
-    filterCb?: (res: responseDto[]) => responseDto[];
+    filterCb?: (res: T[]) => T[]
   }
   

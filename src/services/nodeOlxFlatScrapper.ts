@@ -1,18 +1,25 @@
 import '../bootstrap.ts';
 import Xray from "x-ray";
-import responseDto from "src/types/responseDto.ts";
+import olxResponseDto from "../types/olxResponseDto.ts";
 import executeOptions from "../types/executeOptions.ts";
 import filterFeatured from "../utils/filterFeatured.ts";
 import messageFormat from "../utils/messageFormat.ts";
-import mailingService from "./mailingService.ts";
-import DatabseService, { dbEntity } from './dbService.ts';
+import mailingService from "../services/mailingService.ts";
+import DatabseService from '../services/dbService.ts';
 import hashObject from '../utils/hashObject.ts';
-class NodeOlxFlatScrapper {
-  private _emailTarget = process.env.TARGET_EMAIL || '';
-  private _xrayInstance = Xray();
-  private _db = new DatabseService();
+import { dbEntity } from '../types/dbEntity.ts';
+import Scrapper from '../models/Scrapper.ts';
 
-  execute(cb: (res: responseDto[]) => void, options?: executeOptions) {
+class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
+  private _emailTarget = process.env.TARGET_EMAIL || '';
+  private _db = new DatabseService();
+  private _xrayInstance = Xray();
+
+  constructor() {
+    super();
+  }
+
+  protected _execute(cb: (res: olxResponseDto[]) => void, options?: executeOptions<olxResponseDto>) {
     this._xrayInstance(
       "https://www.olx.pl/nieruchomosci/stancje-pokoje/krakow/?search%5Border%5D=created_at:desc",
       "[data-cy=l-card]",
@@ -28,7 +35,7 @@ class NodeOlxFlatScrapper {
     )
       .paginate("[data-testid=pagination-forward]@href")
       .limit(options?.pageLimit || 1)
-      .then((res: responseDto[]) => {
+      .then((res: olxResponseDto[]) => {
         // #1 - Execute filter
         const filtered = options?.filterCb ? options.filterCb(res) : res;
         // #2 - Execute main callback
@@ -40,8 +47,8 @@ class NodeOlxFlatScrapper {
       });
   }
 
-  prefillState(pageLimit: number) {
-    this.execute(
+  executeToPrefill(pageLimit: number) {
+    this._execute(
       async (res) => {
         console.log("Prefill callback has been executed.");
         const currentState = await this._db.read();
@@ -60,7 +67,7 @@ class NodeOlxFlatScrapper {
   }
 
   executeAndCheck() {
-    this.execute(
+    this._execute(
       async (res) => {
         console.log("Execute and check callback has been executed.");
         const updatedState: dbEntity[] = res.map(obj => {
@@ -110,6 +117,12 @@ class NodeOlxFlatScrapper {
       },
       { pageLimit: 1, filterCb: filterFeatured }
     );
+  }
+
+  executeAndCheckInterval(ms: number) {
+      setInterval(() => {
+        this.executeAndCheck();
+      }, ms)
   }
 }
 
