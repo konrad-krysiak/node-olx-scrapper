@@ -1,6 +1,8 @@
 import objectHash from "object-hash";
-import responseDto from "../types/olxResponseDto.ts";
+import responseDto from "../models/responseDto.ts";
 
-export default (obj: responseDto) => {
-    return objectHash({title: obj.title, price: obj.price})
-}
+export default <T extends responseDto>(
+  obj: T & { title: string; price: string }
+) => {
+  return objectHash({ title: obj.title, price: obj.price });
+};

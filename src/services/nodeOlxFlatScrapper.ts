@@ -7,7 +7,7 @@ import messageFormat from "../utils/messageFormat.ts";
 import mailingService from "../services/mailingService.ts";
 import DatabseService from '../services/dbService.ts';
 import hashObject from '../utils/hashObject.ts';
-import { dbEntity } from '../types/dbEntity.ts';
+import { olxDbEntity } from '../types/olxDbEntity.ts';
 import Scrapper from '../models/Scrapper.ts';
 
 class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
@@ -52,7 +52,7 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
       async (res) => {
         console.log("Prefill callback has been executed.");
         const currentState = await this._db.read();
-        const dataToAdd: dbEntity[] = [];
+        const dataToAdd: olxDbEntity[] = [];
         res.forEach(async (obj) => {
           const objHash = hashObject(obj);
           const alreadyExists = currentState.find(entity => entity.hash === objHash);
@@ -70,7 +70,7 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
     this._execute(
       async (res) => {
         console.log("Execute and check callback has been executed.");
-        const updatedState: dbEntity[] = res.map(obj => {
+        const updatedState: olxDbEntity[] = res.map(obj => {
           return {
             hash: hashObject(obj),
             ...obj,
@@ -83,7 +83,7 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
           console.log('Prefill first! Otherwise lots of email messages will be sent.');
           return;
         }
-        const addedItems: dbEntity[] = [];
+        const addedItems: olxDbEntity[] = [];
         updatedState.forEach((value) => {
           const existsInDb = state.find(obj => obj.hash === value.hash);
           if(!existsInDb) {

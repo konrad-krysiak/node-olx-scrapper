@@ -1,4 +1,4 @@
-import olxResponseDto from "../types/olxResponseDto.ts";
+import responseDto from "../models/responseDto.ts";
 
-export default (res: olxResponseDto[]) =>
+export default <T extends responseDto>(res: T[]) =>
   res.filter((obj) => obj.featured === undefined);
