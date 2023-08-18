@@ -1,17 +1,18 @@
-import '../bootstrap.ts';
+import "../bootstrap.ts";
 import Xray from "x-ray";
 import olxResponseDto from "../types/olxResponseDto.ts";
 import executeOptions from "../types/executeOptions.ts";
 import filterFeatured from "../utils/filterFeatured.ts";
 import messageFormat from "../utils/messageFormat.ts";
+import delay from "../utils/delay.ts";
 import mailingService from "../services/mailingService.ts";
-import DatabseService from '../services/dbService.ts';
-import hashObject from '../utils/hashObject.ts';
-import { olxDbEntity } from '../types/olxDbEntity.ts';
-import Scrapper from '../models/Scrapper.ts';
+import DatabseService from "../services/dbService.ts";
+import hashObject from "../utils/hashObject.ts";
+import { olxDbEntity } from "../types/olxDbEntity.ts";
+import Scrapper from "../models/Scrapper.ts";
 
 class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
-  private _emailTarget = process.env.TARGET_EMAIL || '';
+  private _emailTarget = process.env.TARGET_EMAIL || "";
   private _db = new DatabseService();
   private _xrayInstance = Xray();
 
@@ -19,7 +20,10 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
     super();
   }
 
-  protected _execute(cb: (res: olxResponseDto[]) => void, options?: executeOptions<olxResponseDto>) {
+  protected _execute(
+    cb: (res: olxResponseDto[]) => void,
+    options?: executeOptions<olxResponseDto>
+  ) {
     this._xrayInstance(
       "https://www.olx.pl/nieruchomosci/stancje-pokoje/krakow/?search%5Border%5D=created_at:desc",
       "[data-cy=l-card]",
@@ -55,11 +59,17 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
         const dataToAdd: olxDbEntity[] = [];
         res.forEach(async (obj) => {
           const objHash = hashObject(obj);
-          const alreadyExists = currentState.find(entity => entity.hash === objHash);
-          if(!alreadyExists) {
-            dataToAdd.push({ hash: objHash, ...obj, created: new Date().toLocaleString() });
+          const alreadyExists = currentState.find(
+            (entity) => entity.hash === objHash
+          );
+          if (!alreadyExists) {
+            dataToAdd.push({
+              hash: objHash,
+              ...obj,
+              created: new Date().toLocaleString(),
+            });
           }
-        })
+        });
         await this._db.batchWrite(dataToAdd);
       },
       { pageLimit, filterCb: filterFeatured }
@@ -70,23 +80,25 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
     this._execute(
       async (res) => {
         console.log("Execute and check callback has been executed.");
-        const updatedState: olxDbEntity[] = res.map(obj => {
+        const updatedState: olxDbEntity[] = res.map((obj) => {
           return {
             hash: hashObject(obj),
             ...obj,
-            created: new Date().toLocaleString()
-          }
-        })
+            created: new Date().toLocaleString(),
+          };
+        });
 
         const state = await this._db.read();
-        if(state.length === 0) {
-          console.log('Prefill first! Otherwise lots of email messages will be sent.');
+        if (state.length === 0) {
+          console.log(
+            "Prefill first! Otherwise lots of email messages will be sent."
+          );
           return;
         }
         const addedItems: olxDbEntity[] = [];
         updatedState.forEach((value) => {
-          const existsInDb = state.find(obj => obj.hash === value.hash);
-          if(!existsInDb) {
+          const existsInDb = state.find((obj) => obj.hash === value.hash);
+          if (!existsInDb) {
             addedItems.push(value);
           }
         });
@@ -113,6 +125,8 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
             .catch((err) => {
               console.log("Error when sending email - ", err);
             });
+
+          delay(1000);
         });
       },
       { pageLimit: 1, filterCb: filterFeatured }
@@ -120,9 +134,10 @@ class NodeOlxFlatScrapper extends Scrapper<olxResponseDto> {
   }
 
   executeAndCheckInterval(ms: number) {
-      setInterval(() => {
-        this.executeAndCheck();
-      }, ms)
+    this.executeAndCheck();
+    setInterval(() => {
+      this.executeAndCheck();
+    }, ms);
   }
 }
 
