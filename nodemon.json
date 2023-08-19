@@ -4,6 +4,7 @@
       "ts": "ts-node-esm"
     },
     "watch": ["src/"],
+    "ignore": ["src/db"],
     "ext": "ts"
 }
   
