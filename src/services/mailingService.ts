@@ -1,6 +1,6 @@
-import '../bootstrap.ts'
+/* eslint-disable no-console */
+import "../bootstrap.ts";
 import nodemailer from "nodemailer";
-
 
 class MailingService {
   private _transporter = nodemailer.createTransport({
@@ -11,18 +11,16 @@ class MailingService {
     },
   });
 
-  async sendEmail(recipient: string, subject: string, html:string) {
+  async sendEmail(recipient: string, subject: string, html: string) {
     try {
-      const response = await this._transporter.sendMail({
+      await this._transporter.sendMail({
         from: process.env.SOURCE_EMAIL,
         to: recipient,
         subject,
         html,
       });
-      return response.messageId;
     } catch (e) {
       console.log("Error while sending email.", e);
-      return false;
     }
   }
 }

@@ -1,3 +1,6 @@
-import olxResponseDto from "./olxResponseDto";
+import OlxResponseDto from "./olxResponseDto";
 
-export type olxDbEntity = olxResponseDto & { hash: string, created: string };
+export default interface OlxDbEntity extends OlxResponseDto {
+  hash: string;
+  created: string;
+}

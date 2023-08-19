@@ -1,9 +1,9 @@
-import responseDto from "../models/responseDto";
+import { ResponseDto } from "../models/index.ts";
 
-export default interface olxResponseDto extends responseDto {
-    title: string;
-    price: string;
-    locationDate: string;
-    url: string;
-    featured?: string;
+export default interface OlxResponseDto extends ResponseDto {
+  title: string;
+  price: string;
+  locationDate: string;
+  url: string;
+  featured?: string;
 }

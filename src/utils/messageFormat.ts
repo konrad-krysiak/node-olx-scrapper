@@ -8,6 +8,5 @@ export default ({
   price: string;
   location: string;
   url: string;
-}) => {
-  return `<h2>New offer appeared!</h2><p>title: ${title}</p><p>price: ${price}</p><p>location: ${location}</p><p>url: ${url}</p>`;
-};
+}) =>
+  `<h2>New offer appeared!</h2><p>title: ${title}</p><p>price: ${price}</p><p>location: ${location}</p><p>url: ${url}</p>`;
