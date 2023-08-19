@@ -1,6 +1,5 @@
 
-# Node Olx Scrapper
+# Node Web Scrapper
 
 Web scrapper made using node & typescript. Fetched data is persisted
-in lowdb json storage. Newest records fetched which differ from ones stored
-in db causes email notification.
+in lowdb json storage. If new records differ from old ones stored in lowdb, then user email notification is triggered.
