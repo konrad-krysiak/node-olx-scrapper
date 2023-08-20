@@ -3,14 +3,21 @@ import "../bootstrap.ts";
 import Xray from "x-ray";
 import mailingService from "./mailingService.ts";
 import DatabseService from "./dbService.ts";
-import { hashObject, delay, messageFormat } from "../utils/index.ts";
+import {
+  hashObject,
+  delay,
+  messageFormat,
+  dbFilePaths,
+  getCurrentTime,
+} from "../utils/index.ts";
 import { OlxDbEntity, OlxResponseDto } from "../types/index.ts";
 import { Scrapper } from "../models/index.ts";
 import OLX_FLAT_SCRAPPER_CONFIGURATION from "../config/config.ts";
 
 class NodeOlxFlatScrapper extends Scrapper {
   private _emailTarget = process.env.TARGET_EMAIL || "";
-  private _db = new DatabseService();
+  private _dbSuccess = new DatabseService(dbFilePaths.SENT);
+  private _dbFailed = new DatabseService(dbFilePaths.FAILED);
   private _xrayInstance = Xray();
 
   protected async _execute() {
@@ -34,9 +41,9 @@ class NodeOlxFlatScrapper extends Scrapper {
   }
 
   async prefill() {
-    console.log("Prefill fn has been executed.");
+    console.log(">> Prefill fn has been executed.");
     const response = await this._execute();
-    const currentState = await this._db.read();
+    const currentState = await this._dbSuccess.read();
     const dataToAdd: OlxDbEntity[] = [];
     response.forEach(async (obj) => {
       const objHash = hashObject(obj);
@@ -51,11 +58,11 @@ class NodeOlxFlatScrapper extends Scrapper {
         });
       }
     });
-    await this._db.batchWrite(dataToAdd);
+    await this._dbSuccess.batchWrite(dataToAdd);
   }
 
   async check() {
-    console.log("Check fn has been executed.");
+    console.log(`>> Check fn has been executed. ${getCurrentTime()}`);
 
     const response = await this._execute();
     const updatedState: OlxDbEntity[] = response.map((obj) => ({
@@ -64,11 +71,11 @@ class NodeOlxFlatScrapper extends Scrapper {
       created: new Date().toLocaleString(),
     }));
 
-    const state = await this._db.read();
+    const state = await this._dbSuccess.read();
 
     if (state.length === 0) {
       console.log(
-        "Prefill first! Otherwise lots of email messages will be sent."
+        ">> Prefill first! Otherwise lots of email messages will be sent."
       );
       return;
     }
@@ -81,16 +88,14 @@ class NodeOlxFlatScrapper extends Scrapper {
       }
     });
 
-    await this._db.batchWrite(addedItems);
+    const success: OlxDbEntity[] = [];
+    const failed: OlxDbEntity[] = [];
 
-    console.log(">>", addedItems);
-    console.log("\n");
+    const promises = addedItems.map(async (obj) => {
+      try {
+        await delay(1000);
 
-    addedItems.forEach(async (obj) => {
-      await delay(1000);
-
-      mailingService
-        .sendEmail(
+        await mailingService.sendEmail(
           this._emailTarget,
           "OLX Flat Scrapper",
           messageFormat({
@@ -99,14 +104,19 @@ class NodeOlxFlatScrapper extends Scrapper {
             location: obj.locationDate,
             url: obj.url,
           })
-        )
-        .then(() => {
-          console.log("Sent: ", obj);
-        })
-        .catch((err) => {
-          console.log("Error when sending email - ", err);
-        });
+        );
+        success.push(obj);
+        console.log("Sent: ", obj);
+      } catch (e) {
+        console.log("Failed: ", obj);
+        failed.push(obj);
+      }
     });
+
+    await Promise.all(promises);
+
+    await this._dbSuccess.batchWrite(success);
+    await this._dbFailed.batchWrite(failed);
   }
 
   checkInterval(ms: number) {

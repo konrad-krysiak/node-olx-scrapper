@@ -4,22 +4,23 @@ import { fileURLToPath } from "node:url";
 
 import { Low } from "lowdb";
 import { JSONFile } from "lowdb/node";
-import { OlxDbEntity } from "../types/index.ts";
+import { OlxDbEntity, DatabaseFilePath } from "../types/index.ts";
 
-/**
- * Since current version only supports olx scrapping we are leaving
- * olxDbEntity as-is for now without making this service generic.
- */
+// Since current version only supports olx scrapping we are leaving
+// olxDbEntity as-is for now without making this service generic.
 
 class DatabaseService {
   private __dirname = dirname(fileURLToPath(import.meta.url));
-  private _file = join(this.__dirname, "../db/db.json");
-  private _adapter = new JSONFile<OlxDbEntity[]>(this._file);
+  private _file: string;
+  private _adapter;
   private _defaultData: OlxDbEntity[] = [];
-  private _dbInstance = new Low<OlxDbEntity[]>(
-    this._adapter,
-    this._defaultData
-  );
+  private _dbInstance;
+
+  constructor(filePath: DatabaseFilePath) {
+    this._file = join(this.__dirname, filePath);
+    this._adapter = new JSONFile<OlxDbEntity[]>(this._file);
+    this._dbInstance = new Low<OlxDbEntity[]>(this._adapter, this._defaultData);
+  }
 
   async read() {
     await this._dbInstance.read();
