@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import "../bootstrap.ts";
-import Xray from "x-ray";
+import puppeteer from "puppeteer";
 import mailingService from "./mailingService.ts";
 import DatabseService from "./dbService.ts";
 import {
@@ -18,26 +18,41 @@ class NodeOlxFlatScrapper extends Scrapper {
   private _emailTarget = process.env.TARGET_EMAIL || "";
   private _dbSuccess = new DatabseService(dbFilePaths.SENT);
   private _dbFailed = new DatabseService(dbFilePaths.FAILED);
-  private _xrayInstance = Xray();
 
-  protected async _execute() {
-    const { paginate, pageLimit, callbacks, instance } =
-      OLX_FLAT_SCRAPPER_CONFIGURATION.xray;
-    return this._xrayInstance(
-      instance.source,
-      instance.context,
-      instance.selector
-    )
-      .paginate(paginate)
-      .limit(pageLimit)
-      .then((res) => res as OlxResponseDto[])
-      .then((res) => {
-        let tmp = res;
-        callbacks.forEach((cb) => {
-          tmp = cb(tmp);
-        });
-        return res;
+  async _execute() {
+    const { url, callbacks } = OLX_FLAT_SCRAPPER_CONFIGURATION;
+    const browser = await puppeteer.launch({ headless: "new" });
+    const page = await browser.newPage();
+    await page.goto(url, { waitUntil: "networkidle2" });
+
+    const scrapResult = await page.evaluate(() => {
+      const elements = document.querySelectorAll("[data-cy=l-card]");
+
+      const offers: OlxResponseDto[] = [];
+      elements.forEach((el) => {
+        const entity = {
+          title: el.querySelector("h6")?.textContent || "-",
+          price: el.querySelector("[data-testid=ad-price]")?.textContent || "-",
+          locationDate:
+            el.querySelector("[data-testid=location-date]")?.textContent || "-",
+          url: el.querySelector("a")?.getAttribute("href") || "-",
+          featured:
+            el.querySelector("[data-testid=adCard-featured]")?.textContent ||
+            undefined,
+        };
+        offers.push(entity);
       });
+      return offers;
+    });
+
+    await browser.close();
+
+    let transformedResult = scrapResult;
+    callbacks.forEach((cb) => {
+      transformedResult = cb(transformedResult);
+    });
+
+    return transformedResult;
   }
 
   async prefill() {
@@ -54,6 +69,7 @@ class NodeOlxFlatScrapper extends Scrapper {
         dataToAdd.push({
           hash: objHash,
           ...obj,
+          url: `www.olx.pl${obj.url}`,
           created: new Date().toLocaleString(),
         });
       }
@@ -65,9 +81,10 @@ class NodeOlxFlatScrapper extends Scrapper {
     console.log(`>> Check fn has been executed. ${getCurrentTime()}`);
 
     const response = await this._execute();
-    const updatedState: OlxDbEntity[] = response.map((obj) => ({
+    const augmentedResponse: OlxDbEntity[] = response.map((obj) => ({
       hash: hashObject(obj),
       ...obj,
+      url: `www.olx.pl${obj.url}`,
       created: new Date().toLocaleString(),
     }));
 
@@ -81,7 +98,7 @@ class NodeOlxFlatScrapper extends Scrapper {
     }
 
     const addedItems: OlxDbEntity[] = [];
-    updatedState.forEach((value) => {
+    augmentedResponse.forEach((value) => {
       const existsInDb = state.find((obj) => obj.hash === value.hash);
       if (!existsInDb) {
         addedItems.push(value);

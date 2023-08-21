@@ -1,4 +1,4 @@
 export default {
-  SENT: "../db/db.json",
+  SENT: "../db/succeed.json",
   FAILED: "../db/failed.json",
 } as const;
